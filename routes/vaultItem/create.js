@@ -14,7 +14,6 @@ router.post("/item", async function(req, res, next) {
     } catch (err) {
         return res.status(500).json({ error: err });
     }
-
 });
 
 module.exports = router;
