@@ -9,7 +9,9 @@ const messageCreateRouter = require('./routes/vaultItem/create');
 const messageReadRouter = require('./routes/vaultItem/read');
 const messageUpdateRouter = require('./routes/vaultItem/update');
 const messageDeleteRouter = require('./routes/vaultItem/delete');
+const twitchSetup = require('./twitchConfig');
 
+twitchSetup();
 const app = express();
 
 // view engine setup
@@ -21,7 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
-
 app.use('/api/vault/',
     messageCreateRouter,
     messageReadRouter,

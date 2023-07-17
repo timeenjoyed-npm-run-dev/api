@@ -113,5 +113,5 @@ module.exports = {
     getVaultItems,
     getVaultItem,
     approveVaultItem,
-    rejectVaultItem
+    rejectVaultItem,
 };
